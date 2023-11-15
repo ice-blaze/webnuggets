@@ -1,0 +1,7 @@
+<p>
+  {{nugget.content}}<br>
+  {{nugget.tag}}<br>
+  {{nugget.topic}}<br>
+  <a [href]="nugget.link">source</a><br>
+  <a [routerLink]="['/', 'details', nugget.id]">details</a><br>
+</p>

@@ -1,0 +1,39 @@
+name: LHCI
+
+on: 
+  push:
+  pull_request:
+  schedule:
+    # Does it every monday at 13:00 UTC before Lighthouse reports disapears
+    - cron: "0 13 * * 1"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "lhci"
+  cancel-in-progress: false
+
+jobs:
+  lhci:
+    name: Lighthouse
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+      - name: npm install, build
+        run: |
+          npm install
+          npm run build -- --configuration lhci
+      - name: run Lighthouse CI
+        run: |
+          npm install -g @lhci/cli@0.13.x
+          lhci autorun
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
