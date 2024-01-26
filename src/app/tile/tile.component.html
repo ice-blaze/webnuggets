@@ -1,7 +1,20 @@
-<p>
-  {{nugget.content}}<br>
-  {{nugget.tag}}<br>
-  {{nugget.topic}}<br>
-  <a [href]="nugget.link">source</a><br>
-  <a [routerLink]="['/', 'details', nugget.id]">details</a><br>
-</p>
+<a class="card" [routerLink]="['/', 'details', nugget.id]">
+  <div class="inner-card">
+    <div class="title">
+      <h1>
+        <mat-icon
+          aria-hidden="false"
+          aria-label="Example home icon"
+          [fontIcon]="IconConverter[nugget.format]"
+        ></mat-icon>
+        {{ nugget.title }}
+      </h1>
+    </div>
+    <div class="content">{{ nugget.content }}</div>
+    <div class="topics">
+      @for (topic of nugget.topics; track $index) {
+        <app-pill>{{ topic }}</app-pill>
+      }
+    </div>
+  </div>
+</a>

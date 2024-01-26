@@ -22,7 +22,11 @@
       "source.fixAll.eslint": "explicit"
     },
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "vscode.html-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[sass]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.tabSize": 2,
   "security.allowedUNCHosts": [

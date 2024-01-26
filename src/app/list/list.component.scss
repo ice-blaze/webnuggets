@@ -1,0 +1,15 @@
+@use "../../variables" as *;
+
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, $cardSize);
+  justify-content: center;
+  max-width: 1920px;
+  width: 100%;
+}

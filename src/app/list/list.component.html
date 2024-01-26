@@ -1,9 +1,7 @@
-<p>list works!</p>
 <div class="container">
-
   @for (nugget of nuggets; track $index) {
-  <app-tile [nugget]="nugget"></app-tile>
+    <app-tile [nugget]="nugget"></app-tile>
   } @empty {
-  No nuggets
+    No nuggets
   }
 </div>

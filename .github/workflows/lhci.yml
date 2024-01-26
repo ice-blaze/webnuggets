@@ -1,6 +1,6 @@
 name: LHCI
 
-on: 
+on:
   push:
   pull_request:
   schedule:
@@ -30,10 +30,10 @@ jobs:
         run: |
           npm install
           npm run build -- --configuration lhci
+          rm dist/webnuggets/browser/404.html
       - name: run Lighthouse CI
         run: |
           npm install -g @lhci/cli@0.13.x
           lhci autorun
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
-

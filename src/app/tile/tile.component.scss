@@ -1,0 +1,89 @@
+@use "../../variables" as *;
+
+$redShadow: rgb(255, 92, 92);
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin cardBorder {
+  border-width: $basicBorder;
+  border-radius: 12px;
+  border-color: black;
+  border: solid;
+}
+
+$scale: scale(1.1);
+
+@mixin translate($position, $time: 200ms) {
+  transform: $scale translate(0, $position);
+  transition: transform $time ease-in-out;
+}
+
+.card {
+  background-color: red;
+  padding-bottom: 0.5rem;
+  display: block;
+  @include cardBorder;
+  width: $cardSize;
+  max-width: 550px;
+  transform: scale(0.8);
+}
+
+.inner-card {
+  background-color: white;
+  @include cardBorder;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  height: 260px;
+
+  @include translate(-13px);
+}
+
+.inner-card:active {
+  transform: $scale translate(0px, 10px) !important;
+  transition-duration: 100ms !important;
+}
+
+.inner-card:hover {
+  background-color: $hoverColor;
+  @include translate(-20px);
+}
+
+.card:focus {
+  .inner-card {
+    border-width: $boldBorder;
+    background-color: $focusColor;
+    @include translate(-20px);
+  }
+}
+
+.topics {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: unset;
+}
+
+.topics {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.content {
+  display: -webkit-box;
+  height: 4.5rem;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
