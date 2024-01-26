@@ -9,7 +9,11 @@ export const routes: Routes = [
 	{
 		path: ``,
 		component: ListComponent,
+<<<<<<< HEAD
 		canDeactivate: [() => of(true).pipe(delay(200))],
+=======
+		canDeactivate: [() => of(true).pipe(delay(300))],
+>>>>>>> 061f383 (feat: add css responsiveness and click animation)
 	},
 	{
 		path: `details/:nuggetId`,
