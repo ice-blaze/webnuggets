@@ -7,6 +7,7 @@ import {
 import {RouterModule} from '@angular/router'
 import {PillComponent} from '../pill/pill.component'
 import {MatIconModule} from '@angular/material/icon'
+import {RandomBackgroundColorDirective} from './random-background-color.directive'
 
 @Component({
 	selector: `app-tile`,
@@ -15,6 +16,7 @@ import {MatIconModule} from '@angular/material/icon'
 		RouterModule,
 		MatIconModule,
 		PillComponent,
+		RandomBackgroundColorDirective,
 	],
 	templateUrl: `./tile.component.html`,
 	styleUrl: `./tile.component.scss`,

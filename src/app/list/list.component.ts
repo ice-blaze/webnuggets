@@ -1,5 +1,7 @@
 import {Component} from '@angular/core'
-import {webNuggets} from '../nuggets'
+import {
+	Format, Topic, webNuggets,
+} from '../nuggets'
 import {TileComponent} from '../tile/tile.component'
 
 @Component({
@@ -10,5 +12,19 @@ import {TileComponent} from '../tile/tile.component'
 	styleUrl: `./list.component.scss`,
 })
 export class ListComponent {
-	public nuggets = webNuggets()
+	public nuggets = [
+		...webNuggets(),
+		...(Array.from(Array(30).keys()).map(() => (
+			{
+				id: `calendar`,
+				title: `Google Calendar`,
+				content: `I love calendars`,
+				link: `https://calendar.google.com/`,
+				format: `article` as Format,
+				topics: [
+					`web`,
+					`gaming`,
+				] as Topic[],
+			}))),
+	]
 }

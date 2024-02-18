@@ -1,5 +1,5 @@
-type Format = `book` | `article` | `video` | `tip` | `podcast`
-type Topic = `web` | `gaming` | `softskills` | `angular` | `javascript`
+export type Format = `book` | `article` | `video` | `tip` | `podcast`
+export type Topic = `web` | `gaming` | `softskills` | `angular` | `javascript`
 
 export const IconConverter: Record<Format, string> = {
 	book: `menu_book`,
