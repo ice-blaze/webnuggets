@@ -2,10 +2,14 @@
   class="card"
   [routerLink]="['/', 'details', nugget.id]"
   appRandomBackgroundColor
+  (mouseenter)="enter()"
+  (mouseleave)="leave()"
+  (focus)="enter()"
+  (focusout)="leave()"
 >
   <div class="inner-card">
     <div class="title">
-      <h1>
+      <h1 [class.underlined]="isMouseHover">
         <mat-icon
           aria-hidden="false"
           aria-label="Example home icon"
