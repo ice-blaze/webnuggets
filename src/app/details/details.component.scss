@@ -1,0 +1,24 @@
+@use "../../variables" as *;
+@use "../../card" as *;
+
+@mixin flex() {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.container {
+  @include flex;
+  flex-direction: column;
+}
+
+.actions {
+  @include flex;
+}
+
+.inner-card {
+  @include cardBasis;
+  max-width: 40rem;
+}
+
+@include topics();

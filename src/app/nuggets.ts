@@ -40,13 +40,13 @@ export const webNuggets: ()=> WebNugget[] = () => [
 		id: `beforeunload`,
 		title: `Dialog before leaving page and lose data`,
 		content: `
-		TBD explain 'data can be lost' feature, 
-		angular guard deactivate can help but dont covers 
-		all cases. beforeunload allows to cover most cases 
-		(some exceptions with mobile) but the downside is the 
-		message can't be customised. Still, only 10 code lines 
-		to have this feature compared to handle it with a framework 
-		which couldn't cover all cases (external links need to be coverd without 
+		TBD explain 'data can be lost' feature,
+		angular guard deactivate can help but dont covers
+		all cases. beforeunload allows to cover most cases
+		(some exceptions with mobile) but the downside is the
+		message can't be customised. Still, only 10 code lines
+		to have this feature compared to handle it with a framework
+		which couldn't cover all cases (external links need to be coverd without
 			the guard and therefore nasty dom manual changes)
 		`,
 		link: `https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event`,
@@ -61,21 +61,21 @@ export const webNuggets: ()=> WebNugget[] = () => [
 		id: `githubpagesrouting`,
 		title: `GitHub pages angular redirection`,
 		content: `
-		TBD explain 'data can be lost' feature, 
-		angular guard deactivate can help but dont covers 
-		all cases. beforeunload allows to cover most cases 
-		(some exceptions with mobile) but the downside is the 
-		message can't be customised. Still, only 10 code lines 
-		to have this feature compared to handle it with a framework 
-		which couldn't cover all cases (external links need to be coverd without 
+		TBD explain 'data can be lost' feature,
+		angular guard deactivate can help but dont covers
+		all cases. beforeunload allows to cover most cases
+		(some exceptions with mobile) but the downside is the
+		message can't be customised. Still, only 10 code lines
+		to have this feature compared to handle it with a framework
+		which couldn't cover all cases (external links need to be coverd without
 			the guard and therefore nasty dom manual changes)
 		`,
 		link: `https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event`,
 		format: `tip`,
 		topics: [
 			`web`,
-			`angular`,
 			`javascript`,
+			`angular`,
 		],
 	},
 	{
@@ -84,9 +84,14 @@ export const webNuggets: ()=> WebNugget[] = () => [
 		content: `I love calendars`,
 		link: `https://calendar.google.com/`,
 		format: `article`,
-		topics: [
-			`web`,
-			`gaming`,
-		],
+		topics: [`gaming`],
+	},
+	{
+		id: `calendar2`,
+		title: `Google Calendar super long title super long title super long title`,
+		content: `I love calendars`,
+		link: `https://calendar.google.com/`,
+		format: `article`,
+		topics: [`gaming`],
 	},
 ]

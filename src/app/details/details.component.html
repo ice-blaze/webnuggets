@@ -1,7 +1,30 @@
-<p>
-  {{ nugget.content }}
-  {{ nugget.format }}
-  {{ nugget.topics }}
-  <a [href]="nugget.link">source</a>
-  {{ this.nuggetId }}
-</p>
+<div class="container">
+  <app-title></app-title>
+
+  <div class="inner-card">
+    <div class="title">
+      <h1>
+        <mat-icon
+          aria-hidden="true"
+          [fontIcon]="IconConverter[nugget.format]"
+        ></mat-icon>
+        {{ nugget.title }}
+      </h1>
+    </div>
+    <div class="content">{{ nugget.content }}</div>
+    <div class="topics">
+      @for (topic of nugget.topics; track $index) {
+        <app-pill [text]="topic" />
+      }
+    </div>
+  </div>
+
+  <div>
+    <a [href]="nugget.link">Jump to URL</a>
+  </div>
+
+  <div class="actions">
+    <a class="buttonLook" [routerLink]="['/']">Back</a>
+    <app-random-next />
+  </div>
+</div>

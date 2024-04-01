@@ -1,1 +1,3 @@
-<div class="pill"><ng-content></ng-content></div>
+<div class="pill" [class.selected]="orangeBorder$ | async">
+  {{ text }}
+</div>

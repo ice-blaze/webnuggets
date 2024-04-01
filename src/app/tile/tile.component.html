@@ -9,10 +9,10 @@
 >
   <div class="inner-card">
     <div class="title">
+      <!-- TODO should be limited in size -->
       <h1 [class.underlined]="isMouseHover">
         <mat-icon
-          aria-hidden="false"
-          aria-label="Example home icon"
+          aria-hidden="true"
           [fontIcon]="IconConverter[nugget.format]"
         ></mat-icon>
         {{ nugget.title }}
@@ -21,7 +21,7 @@
     <div class="content">{{ nugget.content }}</div>
     <div class="topics">
       @for (topic of nugget.topics; track $index) {
-        <app-pill>{{ topic }}</app-pill>
+        <app-pill [text]="topic" />
       }
     </div>
   </div>

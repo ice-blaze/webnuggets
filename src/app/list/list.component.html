@@ -1,7 +1,38 @@
 <div class="container">
-  @for (nugget of nuggets; track $index) {
-    <app-tile [nugget]="nugget"></app-tile>
-  } @empty {
-    No nuggets
-  }
+  <app-title></app-title>
+
+  <img
+    ngSrc="/assets/title.png"
+    width="536"
+    height="442"
+    alt="Title image representing a laptop surounded by clouds containing icons related to programmation."
+    priority
+  />
+
+  <div class="search">
+    <label>
+      <span class="screen-reader">
+        Filter the nuggets. Search by any terms or specific topic like
+        article,book or tip.
+      </span>
+      <input
+        type="search"
+        id="search"
+        [formControl]="searchInput"
+        placeholder="e.g. GitHub or article"
+        spellcheck="false"
+        name="webnuggets-search"
+      />
+    </label>
+  </div>
+
+  <app-random-next></app-random-next>
+
+  <div class="nuggets">
+    @for (nugget of nuggets$ | async; track $index) {
+      <app-tile [nugget]="nugget"></app-tile>
+    } @empty {
+      <div class="nothing-found">No nuggets found 😢</div>
+    }
+  </div>
 </div>
