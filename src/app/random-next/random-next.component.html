@@ -1,0 +1,13 @@
+@if (allNuggetsWereVisited) {
+  <button
+    class="tooltip"
+    title="All links have been visited. Click this button to clear your local storage or wait a new article to see the random button back."
+    (click)="clearRandoms()"
+  >
+    i
+  </button>
+} @else {
+  <a class="buttonLook" #link routerLink="{{ urlToGo.join('/') }}">
+    Random Next
+  </a>
+}

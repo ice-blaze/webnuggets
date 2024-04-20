@@ -1,18 +1,23 @@
 import {Routes} from "@angular/router"
 import {DetailsComponent} from "./details/details.component"
 import {ListComponent} from "./list/list.component"
-import {
-	delay, of,
-} from "rxjs"
+import {listResolver} from "./list/list.resolver"
+import {delayGuard} from "./list/delay.guard"
+import {randomMemoryGuard} from "./details/random-memory.guard"
 
+export const nuggetId = `nuggetId`
+export const detailsRoute = `details`
 export const routes: Routes = [
 	{
 		path: ``,
 		component: ListComponent,
-		canDeactivate: [() => of(true).pipe(delay(200))],
+		canDeactivate: [delayGuard],
+		resolve: {nuggets: listResolver},
+		runGuardsAndResolvers: `always`,
 	},
 	{
-		path: `details/:nuggetId`,
+		path: `${detailsRoute}/:${nuggetId}`,
 		component: DetailsComponent,
+		canActivate: [randomMemoryGuard],
 	},
 ]

@@ -4,15 +4,15 @@
   "workbench.iconTheme": "material-icon-theme",
   "[javascript]": {
     "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true,
-      "source.fixAll.@stylistic": true
+      "source.fixAll.eslint": "explicit",
+      "source.fixAll.@stylistic": "explicit"
     },
     "editor.formatOnSave": false
   },
   "[typescript]": {
     "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true,
-      "source.fixAll.@stylistic": true
+      "source.fixAll.eslint": "explicit",
+      "source.fixAll.@stylistic": "explicit"
     },
     "editor.formatOnSave": false
   },

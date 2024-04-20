@@ -1,5 +1,10 @@
 $focusColor: lightblue;
 $hoverColor: orange;
-$basicBorder: 0.2rem;
+$basicBorder: 0.2rem !important;
 $boldBorder: 0.25rem;
 $cardSize: 360px;
+
+@mixin focusColor {
+  border-width: $boldBorder;
+  background-color: $focusColor;
+}

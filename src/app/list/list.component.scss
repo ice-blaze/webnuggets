@@ -1,15 +1,41 @@
 @use "../../variables" as *;
 
-:host {
+.container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
-.container {
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.screen-reader {
+  display: none;
+}
+
+.nuggets {
   display: grid;
   align-items: center;
   grid-template-columns: repeat(auto-fit, $cardSize);
   justify-content: center;
   max-width: 1920px;
   width: 100%;
+}
+
+input[type="search"] {
+  padding-left: 1rem;
+  border-width: $basicBorder;
+  border-color: black;
+  border-radius: 100rem;
+  height: 2rem;
+}
+
+.nothing-found {
+  text-align: center;
+  font-size: 2rem;
 }

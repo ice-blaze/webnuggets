@@ -1,0 +1,16 @@
+@use "../../variables" as *;
+@use "../../card" as *;
+
+.tooltip {
+  @include cardBorder;
+  border-radius: 30rem;
+  width: 2rem;
+  height: 2rem;
+  font-weight: bold;
+  cursor: help;
+}
+
+.tooltip:focus {
+  border-width: $boldBorder;
+  background-color: $focusColor;
+}
