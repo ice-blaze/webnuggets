@@ -19,9 +19,7 @@
     </div>
   </div>
 
-  <div>
-    <a [href]="nugget.link">Jump to URL</a>
-  </div>
+  <app-jump-to-link [nugget]="nugget" />
 
   <div class="actions">
     <a class="buttonLook" [routerLink]="['/']">Back</a>

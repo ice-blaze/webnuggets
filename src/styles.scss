@@ -19,17 +19,11 @@ body {
   color: black;
   display: inline-block;
 }
-
-// .buttonLook:hover {
-//   background-color: yellow;
-//   text-decoration: underline;
-//   text-decoration-thickness: 0.15rem;
-// }
-
-// .buttonLook:focus {
-//   border-width: $boldBorder;
-//   background-color: $focusColor;
-// }
+.buttonLook:focus,
+.buttonLook:hover {
+  text-decoration: underline;
+  text-decoration-thickness: $basicBorder;
+}
 
 h1 {
   margin: 0;

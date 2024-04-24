@@ -18,6 +18,7 @@ import {
 	Router, RouterModule,
 } from '@angular/router'
 import {takeUntilDestroyed} from '@angular/core/rxjs-interop'
+import {JumpToLinkComponent} from '../jump-to-link/jump-to-link.component'
 
 @Component({
 	selector: `app-details`,
@@ -27,6 +28,7 @@ import {takeUntilDestroyed} from '@angular/core/rxjs-interop'
 		TitleComponent,
 		MatIconModule,
 		PillComponent,
+		JumpToLinkComponent,
 		RandomNextComponent,
 		RouterModule,
 	],
