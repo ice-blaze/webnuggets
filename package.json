@@ -48,7 +48,6 @@
     "@types/jest": "^29.5.12",
     "@typescript-eslint/eslint-plugin": "6.11.0",
     "@typescript-eslint/parser": "6.11.0",
-    "angular-cli-ghpages": "^0.6.2",
     "eslint": "^8.54.0",
     "husky": "^8.0.3",
     "jest": "^29.7.0",
