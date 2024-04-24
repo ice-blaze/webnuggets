@@ -15,6 +15,7 @@ export interface WebNugget {
 	content: string
 	link: string
 	format: Format
+	date: string
 	topics: Topic[]
 }
 
@@ -25,29 +26,40 @@ export const emptyWebNuggets: ()=> WebNugget = () => ({
 	link: `empty`,
 	format: `book`,
 	topics: [],
+	date: `0000-00-00`,
 })
 
 export const webNuggets: ()=> WebNugget[] = () => [
 	{
-		id: `maps`,
-		title: `Google maps`,
-		content: `I love google maps`,
-		link: `https://www.google.com/maps`,
-		format: `book`,
+		id: `debugging-csp`,
+		title: `Debugging Content-Security-Policy`,
+		content: `
+		Debugging HTTP headers can be a nightmare, mainly due to the lack of feedback. 
+		One of the best approaches for me is to use multiple browsers. Firefox tends 
+		to provide more verbose information on this matter. Another useful trick is 
+		the website csp.withgoogle.com, where you can input your CSP header and check 
+		for any security issues.
+		`,
+		link: `https://csp.withgoogle.com/docs/index.html`,
+		format: `tip`,
 		topics: [`web`],
+		date: `2024-04-24`,
 	},
 	{
 		id: `beforeunload`,
 		title: `Dialog before leaving page and lose data`,
 		content: `
-		TBD explain 'data can be lost' feature,
-		angular guard deactivate can help but dont covers
-		all cases. beforeunload allows to cover most cases
-		(some exceptions with mobile) but the downside is the
-		message can't be customised. Still, only 10 code lines
-		to have this feature compared to handle it with a framework
-		which couldn't cover all cases (external links need to be coverd without
-			the guard and therefore nasty dom manual changes)
+		If you want to implement a feature like "You will lose your data, are you sure 
+		you want to leave?" in Angular, there are two ways. The first one that comes to 
+		mind is to use guards. The benefit is that you can customize your dialog box. The 
+		downside, and a big one, is that it won't be triggered if you have an external 
+		redirection or if you close the browser or the tab. Therefore, you have the 
+		beforeunload event in JavaScript. It triggers the system dialog "if you leave, 
+		you will lose your data". It's not the best-looking dialog, but there is a clear 
+		reason why you can't customize it. If you could, then you could block a user 
+		from leaving or closing your website by never letting them give the option to 
+		close the dialog. Nevertheless, it's not always used on the web. GitHub, for 
+		example, sometimes uses it, sometimes not.
 		`,
 		link: `https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event`,
 		format: `tip`,
@@ -56,19 +68,20 @@ export const webNuggets: ()=> WebNugget[] = () => [
 			`angular`,
 			`javascript`,
 		],
+		date: `2024-04-24`,
 	},
 	{
 		id: `githubpagesrouting`,
 		title: `GitHub pages angular redirection`,
 		content: `
-		TBD explain 'data can be lost' feature,
-		angular guard deactivate can help but dont covers
-		all cases. beforeunload allows to cover most cases
-		(some exceptions with mobile) but the downside is the
-		message can't be customised. Still, only 10 code lines
-		to have this feature compared to handle it with a framework
-		which couldn't cover all cases (external links need to be coverd without
-			the guard and therefore nasty dom manual changes)
+		GitHub Pages doesn't support Angular routing out of the box. One solution is 
+		to use hashtag routes. However, they look odd and aren't common. Also, they add 
+		confusion since hashtags are typically used to jump to headings on the current 
+		page. So when you type http://user.github.io/project/any-other-page, GitHub 
+		doesn't recognize this page because it serves only the index.html. Therefore, when 
+		it doesn't know the URL, it redirects to the 404.html page. The trick is to 
+		duplicate your index.html and name it also 404.html. Then Angular can manage 
+		the routing as normal.
 		`,
 		link: `https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event`,
 		format: `tip`,
@@ -77,6 +90,7 @@ export const webNuggets: ()=> WebNugget[] = () => [
 			`javascript`,
 			`angular`,
 		],
+		date: `2024-04-24`,
 	},
 	{
 		id: `calendar`,
@@ -85,6 +99,7 @@ export const webNuggets: ()=> WebNugget[] = () => [
 		link: `https://calendar.google.com/`,
 		format: `article`,
 		topics: [`gaming`],
+		date: `2024-04-24`,
 	},
 	{
 		id: `calendar2`,
@@ -93,5 +108,6 @@ export const webNuggets: ()=> WebNugget[] = () => [
 		link: `https://calendar.google.com/`,
 		format: `article`,
 		topics: [`gaming`],
+		date: `2024-04-24`,
 	},
 ]
