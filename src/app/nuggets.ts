@@ -115,12 +115,19 @@ export const webNuggets: ()=> WebNugget[] = () => [
 		date: `2024-04-26`,
 	},
 	{
-		id: `calendar2`,
-		title: `Google Calendar super long title super long title super long title`,
-		content: `I love calendars`,
-		link: `https://calendar.google.com/`,
-		format: `article`,
-		topics: [`gaming`],
+		id: `eventlistener-once`,
+		title: `addEventListener once`,
+		content: `
+		Recently, I learned about the existence of the "once" option in the addEventListener 
+		method. It's a quite useful parameter that allows your event to run only once and 
+		then destroy itself. For example, if you want to add a click event on a button and 
+		prevent multiple clicks, you can add the "once" parameter. Then, you don't have to 
+		worry anymore about whether the button is clicked multiple times. (This was a 
+		made-up example and there may be better ways to handle this case.)
+		`,
+		link: `https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#once`,
+		format: `tip`,
+		topics: [`javascript`],
 		date: `2024-04-24`,
 	},
 ]
