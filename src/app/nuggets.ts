@@ -163,4 +163,28 @@ export const webNuggets: ()=> WebNugget[] = () => [
 		topics: [`web`],
 		date: `2024-04-26`,
 	},
+	{
+		id: `coutinuous-delivery`,
+		title: `Continuous delivery`,
+		content: `
+		Continuous delivery has a superpower: it reveals many flaws in your process if you 
+		don't use it. For example, if you haven't automated migration files in your project, 
+		then you can't implement continuous delivery because it requires automatically 
+		deploying your websites, which needs scripts. Another point is that when you deploy 
+		multiple times per day, it means you need to have high stability. In the old days, 
+		this stability wasn't really there and was covered by multiple environments and 
+		manual testers to have high confidence in the next planned release. To gain this 
+		stability, you need to have a well-tested application, both frontend and backend. 
+		Some teams achieve it only with unit tests and contract testing. They really 
+		avoid end-to-end testing because they consider it too expensive and still 
+		achieve high confidence with only unit and contract testing. Another important 
+		aspect of continuous delivery is using feature flags. They allow you to deploy 
+		new features that stay invisible to the user. Then, when everyone thinks it's 
+		really ready to be shown to others, the flag is activated.
+		`,
+		link: ``,
+		format: `tip`,
+		topics: [`web`],
+		date: `2024-04-26`,
+	},
 ]
