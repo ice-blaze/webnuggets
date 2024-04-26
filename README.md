@@ -2,13 +2,13 @@
 
 You can access to the website through this link: https://ice-blaze.github.io/webnuggets/
 
-The goal of this project is to have a website that list all cool links, articles, video, books and more that I encounter during my journey.
+The aim of this project is to create a website where I can list all the cool links, articles, videos, books, and more that I come across during my journey.
 
 ## Stack
 
-* Angular 17
-* Github Actions
+- Angular 17
+- Github Actions
 
 ## CI/CD
 
-The CI/CD will deploy automaticaly the website through the github pages. 
+The CI/CD will automatically deploy the website using GitHub Pages.
