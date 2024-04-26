@@ -20,33 +20,47 @@ function removeOneElementOfAnArray(
 describe(
 	`Nuggets`,
 	() => {
-		function containsDuplicatedId(array: WebNugget[]): boolean {
-			return array.some((
-				nugget, index,
-			) => removeOneElementOfAnArray(
-				array,
-				index,
-			).find((nugget2) => nugget2.id === nugget.id))
-		}
-
-		it(
-			`should not have any duplicated id`,
+		describe(
+			`ids`,
 			() => {
-				const nuggets = webNuggets()
-				const containsDuplicates = containsDuplicatedId(nuggets)
-				expect(containsDuplicates).toBe(false)
-			},
-		)
+				function containsDuplicatedId(array: WebNugget[]): boolean {
+					return array.some((
+						nugget, index,
+					) => removeOneElementOfAnArray(
+						array,
+						index,
+					).find((nugget2) => nugget2.id === nugget.id))
+				}
 
-		it(
-			`should fail when adding two same elements`,
-			() => {
-				const nuggets = [
-					...webNuggets(),
-					webNuggets()[0],
-				]
-				const containsDuplicates = containsDuplicatedId(nuggets)
-				expect(containsDuplicates).toBe(true)
+				it(
+					`should not have any duplicates`,
+					() => {
+						const nuggets = webNuggets()
+						const containsDuplicates = containsDuplicatedId(nuggets)
+						expect(containsDuplicates).toBe(false)
+					},
+				)
+
+				it(
+					`should fail when adding two same elements`,
+					() => {
+						const nuggets = [
+							...webNuggets(),
+							webNuggets()[0],
+						]
+						const containsDuplicates = containsDuplicatedId(nuggets)
+						expect(containsDuplicates).toBe(true)
+					},
+				)
+
+				it(
+					`should not contain spaces`,
+					() => {
+						const nuggets = webNuggets()
+						const containsSpaces = nuggets.some((nugget) => nugget.id.includes(` `))
+						expect(containsSpaces).toBe(false)
+					},
+				)
 			},
 		)
 

@@ -93,13 +93,26 @@ export const webNuggets: ()=> WebNugget[] = () => [
 		date: `2024-04-24`,
 	},
 	{
-		id: `calendar`,
-		title: `Google Calendar`,
-		content: `I love calendars`,
-		link: `https://calendar.google.com/`,
-		format: `article`,
-		topics: [`gaming`],
-		date: `2024-04-24`,
+		id: `spot-the-difference`,
+		title: `Spot the difference `,
+		content: `
+		As a developer, I've found it really helpful to pay attention to the user experience 
+		on other websites, especially the ones that are considered the best: YouTube, Google,
+		GitHub, and Mozilla. Then, I can compare it with my own websites. For example, 
+		sometimes I'm surprised that developers tend to reinvent the wheel instead of simply 
+		checking out the best websites and seeing how they do things, especially for the 
+		frontend part (which is mostly open source), or at least how fast their websites load.
+		Also, we sometimes overlook poor website performance. We get used to it and never 
+		really ask ourselves, "Should it be that slow?" So, my advice is to always compare 
+		your website with the best in class and pay attention to details like how fast 
+		a button loads, which HTTP headers they use, how many endpoints they call, and 
+		what kind of caching they implement. Even if you don't know everything, this skill 
+		will help you continuously improve and stay up to date.
+		`,
+		link: ``,
+		format: `tip`,
+		topics: [`web`],
+		date: `2024-04-26`,
 	},
 	{
 		id: `calendar2`,
