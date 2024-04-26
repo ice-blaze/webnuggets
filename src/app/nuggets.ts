@@ -128,6 +128,22 @@ export const webNuggets: ()=> WebNugget[] = () => [
 		link: `https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#once`,
 		format: `tip`,
 		topics: [`javascript`],
-		date: `2024-04-24`,
+		date: `2024-04-26`,
+	},
+	{
+		id: `export-fixtures`,
+		title: `Unit tests, fixtures and exports`,
+		content: `
+		When using Jest, you need to be careful with your fixtures and exports. If in 
+		your test file you import from another file that also contains unit tests, those 
+		tests will be executed. This happened to me when I left the fixtures in test file 
+		A and then tried to use the same fixture in test file B. The easiest solution for 
+		me was to always separate fixtures and put them in their own file containing only 
+		fixtures.
+		`,
+		link: ``,
+		format: `tip`,
+		topics: [`javascript`],
+		date: `2024-04-26`,
 	},
 ]
