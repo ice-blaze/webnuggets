@@ -1,7 +1,9 @@
-<a [href]="nugget.link">
-  Go to the {{ nugget.format }}
-  @if (nugget.format !== "tip") {
-    link
-  }
-  <mat-icon aria-hidden="true" fontIcon="navigate_next"></mat-icon>
-</a>
+@if (nugget.link !== "") {
+  <a [href]="nugget.link">
+    Go to the {{ nugget.format }}
+    @if (nugget.format !== "tip") {
+      link
+    }
+    <mat-icon aria-hidden="true" fontIcon="navigate_next"></mat-icon>
+  </a>
+}
