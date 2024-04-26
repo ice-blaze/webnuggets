@@ -146,4 +146,21 @@ export const webNuggets: ()=> WebNugget[] = () => [
 		topics: [`javascript`],
 		date: `2024-04-26`,
 	},
+	{
+		id: `commitlint`,
+		title: `Clean commits`,
+		content: `
+		Having clean commits helps maintain structure in your repository history. It also 
+		allows you to generate automated change logs based on the commit messages. However, 
+		as with many DevOps topics, implementing these kind of tools can be cumbersome.
+		Fortunately, there's a very useful tool called commitlint. It allows you to 
+		check/lint all your commit messages out of the box if you use the recommended 
+		rules. These rules are already quite good overall, but if they don't suit your
+		taste, you can override the configuration file and decide on many other things.
+		`,
+		link: `https://github.com/conventional-changelog/commitlint`,
+		format: `tip`,
+		topics: [`web`],
+		date: `2024-04-26`,
+	},
 ]
