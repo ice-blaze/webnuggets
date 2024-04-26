@@ -1,5 +1,5 @@
 export type Format = `book` | `article` | `video` | `tip` | `podcast`
-export type Topic = `web` | `gaming` | `softskills` | `angular` | `javascript`
+export type Topic = `web` | `gaming` | `softskills` | `angular` | `javascript` | `css` | `accessibility`
 
 export const IconConverter: Record<Format, string> = {
 	book: `menu_book`,
@@ -45,6 +45,7 @@ export const webNuggets: ()=> WebNugget[] = () => [
 		topics: [`web`],
 		date: `2024-04-24`,
 	},
+
 	{
 		id: `beforeunload`,
 		title: `Dialog before leaving page and lose data`,
@@ -70,6 +71,7 @@ export const webNuggets: ()=> WebNugget[] = () => [
 		],
 		date: `2024-04-24`,
 	},
+
 	{
 		id: `githubpagesrouting`,
 		title: `GitHub pages angular redirection`,
@@ -92,6 +94,7 @@ export const webNuggets: ()=> WebNugget[] = () => [
 		],
 		date: `2024-04-24`,
 	},
+
 	{
 		id: `spot-the-difference`,
 		title: `Spot the difference `,
@@ -114,6 +117,7 @@ export const webNuggets: ()=> WebNugget[] = () => [
 		topics: [`web`],
 		date: `2024-04-26`,
 	},
+
 	{
 		id: `eventlistener-once`,
 		title: `addEventListener once`,
@@ -130,6 +134,7 @@ export const webNuggets: ()=> WebNugget[] = () => [
 		topics: [`javascript`],
 		date: `2024-04-26`,
 	},
+
 	{
 		id: `export-fixtures`,
 		title: `Unit tests, fixtures and exports`,
@@ -146,6 +151,7 @@ export const webNuggets: ()=> WebNugget[] = () => [
 		topics: [`javascript`],
 		date: `2024-04-26`,
 	},
+
 	{
 		id: `commitlint`,
 		title: `Clean commits`,
@@ -163,6 +169,7 @@ export const webNuggets: ()=> WebNugget[] = () => [
 		topics: [`web`],
 		date: `2024-04-26`,
 	},
+
 	{
 		id: `coutinuous-delivery`,
 		title: `Continuous delivery`,
@@ -187,4 +194,298 @@ export const webNuggets: ()=> WebNugget[] = () => [
 		topics: [`web`],
 		date: `2024-04-26`,
 	},
+
+	{
+		id: `sbb-angular`,
+		title: `SBB Angular documentation`,
+		content: `
+		The Swiss Federal Railways has public documentation similar to a Storybook.js. 
+		Since it's of good quality, I think it's great to take a look at it🙂!
+		`,
+		link: `https://angular.app.sbb.ch/angular/introduction/getting-started`,
+		format: `tip`,
+		topics: [`angular`],
+		date: `2024-04-26`,
+	},
+
+	{
+		id: `optimization-object-destructuring`,
+		title: `Bundle size analysis and object desctructuring`,
+		content: `
+		Sometimes it's interesting to dig deep into the details. In my comment here, 
+		I wanted to see how optimized different coding styles can be. Of course, we're 
+		talking about just a few bytes, and I'll always prioritize maintainability over 
+		performance. But for some people, performance prevails, and in web development, 
+		every byte can count.
+		`,
+		link: `https://stackoverflow.com/a/77257279/3012928`,
+		format: `article`,
+		topics: [`javascript`],
+		date: `2024-04-26`,
+	},
+
+	{
+		id: `angular-binding-specificity`,
+		title: `Angular binding specificity`,
+		content: `
+		A good article about the basics of binding in Angular. It's always a good reminder.
+		`,
+		link: `https://www.angulartraining.com/daily-newsletter/increasing-binding-specificity/`,
+		format: `article`,
+		topics: [`angular`],
+		date: `2024-04-26`,
+	},
+
+	{
+		id: `base64-images-shouldnt-be-used`,
+		title: `Base64 images shouldn't be used`,
+		content: `
+		An interesting article about why you should not use base64 images. In summary, 
+		they're 30% larger than using standard images, and the browser won't be able to 
+		cache them. Base64 images may only be acceptable when you have a lot of very small 
+		images.
+		`,
+		link: `https://bunny.net/blog/why-optimizing-your-images-with-base64-is-almost-always-a-bad-idea/`,
+		format: `article`,
+		topics: [`web`],
+		date: `2024-04-26`,
+	},
+
+	{
+		id: `chrome-developer-tools`,
+		title: `Chrome developer tools`,
+		content: `
+		Chrome already contains a lot of cool tools. One of my favorites are: 
+		the color picker, coverage for CSS/JS, and pretty print. You can 
+		find out more in this article.
+		`,
+		link: `https://betterprogramming.pub/10-must-know-chrome-developer-tools-and-tricks-d03f75d10cc9`,
+		format: `article`,
+		topics: [`web`],
+		date: `2024-04-26`,
+	},
+
+	{
+		id: `console-dir`,
+		title: `Console.dir`,
+		content: `
+		I recently learned about console.dir, which seems like an interesting tool 
+		for debugging in more detail.
+		`,
+		link: `https://twitter.com/samijaber_/status/1633509181025320960`,
+		format: `article`,
+		topics: [`angular`],
+		date: `2024-04-26`,
+	},
+
+	{
+		id: `css-text-wrap-balance`,
+		title: `CSS text-wrap: balance `,
+		content: `
+		There's a new value for text-wrap now, and it's "balance." Here's a video that gives 
+		you more insights.
+		`,
+		link: `https://www.youtube.com/watch?v=L9ihWHngk9E`,
+		format: `video`,
+		topics: [`css`],
+		date: `2024-04-26`,
+	},
+
+	{
+		id: `dont-use-shortening-url-service`,
+		title: `Don't use a url shortening service`,
+		content: `
+		An interesting article about why a url shortening service can be your doom 🙃
+		`,
+		link: `https://shkspr.mobi/blog/2023/02/never-use-a-url-shortening-service-even-if-you-own-it/`,
+		format: `article`,
+		topics: [`web`],
+		date: `2024-04-26`,
+	},
+
+	{
+		id: `image-loading-optimization`,
+		title: `Image loading optimization`,
+		content: `
+		Great video about image loading on your website. In Angular, we have 
+		NgOptimizedImage that covers some of the aspects mentioned in the video.
+		`,
+		link: `https://twitter.com/Steve8708/status/1618634232942981120`,
+		format: `video`,
+		topics: [`web`],
+		date: `2024-04-26`,
+	},
+
+	{
+		id: `angular-setters-for-inputs`,
+		title: `Angular inputs setters`,
+		content: `
+		In Angular, we can use setters with inputs, which allows us to reduce the size 
+		of the ngOnChanges method. However, when you want to use the input as a variable,
+		I would suggest keeping the traditional way instead of using a getter/setter. Also, 
+		you have to keep in mind that now transforms exist with inputs. They are limited,
+		but maybe they will cover your case.
+		`,
+		link: `https://www.angulartraining.com/daily-newsletter/using-setters-for-better-input/`,
+		format: `article`,
+		topics: [`angular`],
+		date: `2024-04-26`,
+	},
+
+	{
+		id: `double-async-pipe`,
+		title: `Double async pipe`,
+		content: `
+		Cool trick to merge multiple async pipes into one variable.
+		`,
+		link: `https://www.angulartraining.com/daily-newsletter/one-more-async-pipe-syntax-trick/`,
+		format: `article`,
+		topics: [`angular`],
+		date: `2024-04-26`,
+	},
+
+	{
+		id: `angular-transforms`,
+		title: `Angular transforms`,
+		content: `
+		Transforms are a tool that we've been waiting for a long time, and we're happy 
+		that they've finally arrived.
+		`,
+		// eslint-disable-next-line @stylistic/js/max-len
+		link: `https://netbasal.com/say-goodbye-to-setters-and-getters-angulars-transform-option-for-input-values-88fd9442dcad`,
+		format: `article`,
+		topics: [`angular`],
+		date: `2024-04-26`,
+	},
+
+	{
+		id: `codelyzer`,
+		title: `Codelyzer`,
+		content: `
+		Accessibility can be tricky, and if we have the tools to help us in this quest 
+		for an inclusive web, then everyone should praise it! :)
+		`,
+		link: `https://web.dev/articles/accessible-angular-with-codelyzer`,
+		format: `article`,
+		topics: [
+			`angular`,
+			`accessibility`,
+		],
+		date: `2024-04-26`,
+	},
+
+	{
+		id: `avoid-shared-angular-modules`,
+		title: `Avoid shared Angular modules`,
+		content: `
+		Using a shared module isn't always the best idea. There's a risk of bloating the 
+		bundle with code that will mostly never be used. This problem is solved by using 
+		standalone components, which didn't exist at the time of the article.
+		`,
+		link: `https://indepth.dev/posts/1191/stop-using-shared-material-module`,
+		format: `article`,
+		topics: [`web`],
+		date: `2024-04-26`,
+	},
+
+	{
+		id: `browser-native deep object cloning`,
+		title: `Browser-native deep object cloning`,
+		content: `
+		Every time we learn about a cool native functionality, the web developer is happy. 
+		Here, we can do deep object cloning natively, which is great news! :)
+		`,
+		link: `https://twitter.com/Steve8708/status/1524055922997309442`,
+		format: `video`,
+		topics: [`javascript`],
+		date: `2024-04-26`,
+	},
+
+	{
+		id: `initiator-highlight`,
+		title: `Initiator highlight`,
+		content: `
+		When holding the shift key while hovering over a request on Chrome DevTools 
+		will highlight the initiator in green and dependencies in red.
+		`,
+		link: `https://twitter.com/guaca/status/1544967782206431234`,
+		format: `article`,
+		topics: [`web`],
+		date: `2024-04-26`,
+	},
+
+	{
+		id: `editor-sticky-scroll`,
+		title: `Editor sticky scroll`,
+		content: `
+		A cool feature in VS Code is the sticky scroll. It allows you to always see 
+		which parent indent you are currently in.
+		`,
+		link: `https://learn.microsoft.com/en-us/visualstudio/ide/editor-sticky-scroll`,
+		format: `tip`,
+		topics: [`web`],
+		date: `2024-04-26`,
+	},
+
+	{
+		id: `prettier-plugin-html-attributes`,
+		title: `Prettier plugin for HTML attributes`,
+		content: `
+		I like when linters can enforce rules. The more you can script the guidelines, 
+		the better it is. Here we have a plugin for arranging HTML attributes.
+		`,
+		link: `https://twitter.com/realTomaszKula/status/1557676393491742721`,
+		format: `article`,
+		topics: [`web`],
+		date: `2024-04-26`,
+	},
+
+	{
+		id: `code-coverage-best-practices`,
+		title: `Code coverage best practices`,
+		content: `
+		I would have loved to read this page when I started doing unit tests. 
+		I found it later on, but was happy to confirm what I had read in other places 
+		was similar to this Google article.
+		`,
+		link: `https://testing.googleblog.com/2020/08/code-coverage-best-practices.html`,
+		format: `article`,
+		topics: [`web`],
+		date: `2024-04-26`,
+	},
+
+	{
+		id: `libraries-angular-maintenance`,
+		title: `Angular libraries choice`,
+		content: `
+		When I need a functionality in my project, I ask myself three questions every time. 
+		First, can I implement the functionality myself? If yes, and it doesn't require too 
+		much work, it's a good candidate to do it that way. Then the second question: is 
+		there a JavaScript library that does the job? If there is a library, small, popular, 
+		and well-maintained, then I might consider this second solution too. The last 
+		question only happens if the first two aren't that conclusive: is there an Angular 
+		library doing the job? The reason why I tend to avoid the third question is for 
+		maintainability reasons. Angular libraries need to share the same major version 
+		as your current Angular project version. If you have 20 dependencies, it means 
+		all of them need to be upgraded before yours is upgraded. Since Angular libraries 
+		tend to be less popular, they can die out fast. With JavaScript libraries, you 
+		don't have to worry about the major Angular version, so it will never be late 
+		in upgrading their major version.
+		`,
+		link: ``,
+		format: `tip`,
+		topics: [`angular`],
+		date: `2024-04-26`,
+	},
+
+	// {
+	// id: ``,
+	// title: ``,
+	// content: `
+	// `,
+	// link: ``,
+	// format: `article`,
+	// topics: [`web`],
+	// date: `2024-04-26`,
+	// },
 ]
