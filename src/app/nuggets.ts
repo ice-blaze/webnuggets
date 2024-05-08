@@ -478,6 +478,22 @@ export const webNuggets: ()=> WebNugget[] = () => [
 		date: `2024-04-26`,
 	},
 
+	{
+		id: `the-clean-coder`,
+		title: `The Clean Coder`,
+		content: `
+		This book isn't specifically about coding; it's more about professionalism—what's
+		expected of you at work. It includes great examples of various situations with 
+		coworkers, especially when there's tension around deadlines, including potentially 
+		unachievable ones. I've read this book twice and really appreciate Uncle Bob's 
+		writing style. Although some aspects may seem old-fashioned to me, it's still 
+		valuable to consider different points of view.
+		`,
+		link: `https://www.amazon.com/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073`,
+		format: `book`,
+		topics: [`softskills`],
+		date: `2024-05-08`,
+	},
 	// {
 	// id: ``,
 	// title: ``,
