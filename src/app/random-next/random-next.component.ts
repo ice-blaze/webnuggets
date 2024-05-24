@@ -1,5 +1,5 @@
 import {
-	Component, OnInit,
+	Component, Input, OnInit,
 	inject,
 } from '@angular/core'
 import {
@@ -24,6 +24,9 @@ export class RandomNextComponent implements OnInit {
 	public urlToGo = [`/`]
 	public allNuggetsWereVisited = false
 	private readonly route = inject(ActivatedRoute)
+
+	@Input()
+	public buttonText: `Random Next` | `Random Nugget` = `Random Next`
 
 	public clearRandoms(): void {
 		localStorage.removeItem(visitedKey)
