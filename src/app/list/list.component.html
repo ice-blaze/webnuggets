@@ -27,7 +27,7 @@
     </label>
   </div>
 
-  <app-random-next [buttonText]="'Random Nugget'"></app-random-next>
+  <app-random-next />
 
   <div class="nuggets">
     @for (nugget of nuggets$ | async; track $index) {
