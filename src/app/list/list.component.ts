@@ -21,6 +21,7 @@ import {searchParam} from './list.resolver'
 import {TitleComponent} from '../title/title.component'
 import {RandomNextComponent} from '../random-next/random-next.component'
 import {BackToTopComponent} from './back-to-top/back-to-top.component'
+import {MatIconModule} from '@angular/material/icon'
 
 @Component({
 	selector: `app-list`,
@@ -33,6 +34,7 @@ import {BackToTopComponent} from './back-to-top/back-to-top.component'
 		RandomNextComponent,
 		NgOptimizedImage,
 		BackToTopComponent,
+		MatIconModule,
 	],
 	templateUrl: `./list.component.html`,
 	styleUrl: `./list.component.scss`,

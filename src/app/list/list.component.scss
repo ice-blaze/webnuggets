@@ -13,6 +13,11 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+
+  mat-icon {
+    position: absolute;
+    padding: 0.8rem;
+  }
 }
 
 .screen-reader {
@@ -29,11 +34,13 @@
 }
 
 input[type="search"] {
-  padding-left: 1rem;
+  padding-left: 2.5rem;
+  padding-right: 1rem;
   border-width: $basicBorder;
   border-color: black;
   border-radius: 100rem;
-  height: 2rem;
+  height: 3rem;
+  font-size: 1rem;
 }
 
 .nothing-found {

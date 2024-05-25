@@ -15,11 +15,12 @@
         Filter the nuggets. Search by any terms or specific topic like
         article,book or tip.
       </span>
+      <mat-icon aria-hidden="true" [fontIcon]="'search'"></mat-icon>
       <input
         type="search"
         id="search"
         [formControl]="searchInput"
-        placeholder="e.g. GitHub or article"
+        placeholder="e.g. GitHub or article..."
         spellcheck="false"
         name="webnuggets-search"
       />
