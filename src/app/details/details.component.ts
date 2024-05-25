@@ -19,6 +19,7 @@ import {
 } from '@angular/router'
 import {takeUntilDestroyed} from '@angular/core/rxjs-interop'
 import {JumpToLinkComponent} from '../jump-to-link/jump-to-link.component'
+import {NavigationBackService} from '../navigation-back.service'
 
 @Component({
 	selector: `app-details`,
@@ -40,6 +41,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
 	public nugget!: WebNugget
 	public readonly IconConverter = IconConverter
 	private readonly router = inject(Router)
+	private readonly navigationBackService = inject(NavigationBackService)
 
 	// eslint-disable-next-line no-unused-vars
 	private oldRouteStrategy: (future: ActivatedRouteSnapshot, curr: ActivatedRouteSnapshot)=> boolean
@@ -64,5 +66,9 @@ export class DetailsComponent implements OnInit, OnDestroy {
 
 	public ngOnInit(): void {
 		this.nugget = webNuggets().find((nugget) => nugget.id === this.nuggetId) ?? emptyWebNuggets()
+	}
+
+	public back(): void {
+		this.navigationBackService.back()
 	}
 }

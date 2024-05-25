@@ -1,9 +1,12 @@
-import {Component} from "@angular/core"
+import {
+	Component, inject,
+} from "@angular/core"
 import {CommonModule} from "@angular/common"
 import {RouterOutlet} from "@angular/router"
 import {ListComponent} from "./list/list.component"
 import {DetailsComponent} from "./details/details.component"
 import {FooterComponent} from "./footer/footer.component"
+import {NavigationBackService} from "./navigation-back.service"
 
 @Component({
 	selector: `app-root`,
@@ -19,4 +22,8 @@ import {FooterComponent} from "./footer/footer.component"
 	styleUrls: [`./app.component.scss`],
 })
 // eslint-disable-next-line @typescript-eslint/no-extraneous-class
-export class AppComponent {}
+export class AppComponent {
+	public constructor() {
+		inject(NavigationBackService)
+	}
+}

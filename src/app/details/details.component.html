@@ -21,7 +21,15 @@
   </div>
 
   <div class="actions">
-    <a class="buttonLook" [routerLink]="['/']">Back</a>
+    <button
+      class="buttonLook"
+      role="link"
+      (click)="back()"
+      (keydown.enter)="back()"
+      (keydown.space)="back()"
+    >
+      Back Home
+    </button>
     <app-random-next />
   </div>
 </div>
