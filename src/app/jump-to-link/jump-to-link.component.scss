@@ -1,5 +1,10 @@
 @use "../../variables.scss" as *;
 
+:host {
+  display: flex;
+  justify-content: center;
+}
+
 // a {
 //   display: flex;
 //   align-items: center;
@@ -21,6 +26,7 @@ a {
   text-decoration: none;
   font-size: larger;
   font-weight: bolder;
+  width: fit-content;
 }
 
 a::before {

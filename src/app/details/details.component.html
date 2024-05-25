@@ -12,14 +12,13 @@
       </h1>
     </div>
     <div class="content">{{ nugget.content }}</div>
+    <app-jump-to-link [nugget]="nugget" />
     <div class="topics">
       @for (topic of nugget.topics; track $index) {
         <app-pill [text]="topic" />
       }
     </div>
   </div>
-
-  <app-jump-to-link [nugget]="nugget" />
 
   <div class="actions">
     <a class="buttonLook" [routerLink]="['/']">Back</a>
