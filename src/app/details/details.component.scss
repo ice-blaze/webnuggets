@@ -21,4 +21,8 @@
   max-width: 40rem;
 }
 
+.buttonLook {
+  background-color: $background;
+}
+
 @include topics();
