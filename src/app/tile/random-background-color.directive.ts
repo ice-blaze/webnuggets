@@ -10,12 +10,13 @@ export class RandomBackgroundColorDirective {
 	private el = inject(ElementRef)
 
 	private readonly colorList = [
-		`#ffe800`, // yellow
 		`#008cff`, // blue
-		`#2beeff`, // cyan
 		`#ff2020`, // red
 		`#4ddd4d`, // green
-		`#ffc500`, // mustard
+		`#f9de0c`, // yellow
+		// `#ffc500`, // mustard
+		// `#28ffa5`, // cyan/green
+		// `#23e1ff`, // light blue
 	]
 
 	private static availableColorList: string[] = []
