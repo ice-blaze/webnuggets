@@ -20,6 +20,7 @@ import {
 import {searchParam} from './list.resolver'
 import {TitleComponent} from '../title/title.component'
 import {RandomNextComponent} from '../random-next/random-next.component'
+import {BackToTopComponent} from './back-to-top/back-to-top.component'
 
 @Component({
 	selector: `app-list`,
@@ -31,6 +32,7 @@ import {RandomNextComponent} from '../random-next/random-next.component'
 		AsyncPipe,
 		RandomNextComponent,
 		NgOptimizedImage,
+		BackToTopComponent,
 	],
 	templateUrl: `./list.component.html`,
 	styleUrl: `./list.component.scss`,
