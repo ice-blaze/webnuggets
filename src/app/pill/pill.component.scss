@@ -2,12 +2,12 @@
 
 .pill {
   border: solid;
-  border-width: $basicBorder;
+  border-width: 0.1rem;
   border-radius: 22px;
   text-align: center;
   width: min-content;
   padding: 0.25rem 1rem;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1rem;
 
   background-color: white;
