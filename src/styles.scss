@@ -9,7 +9,7 @@ body {
 // TODO maybe add to shared
 .buttonLook {
   background-color: orange;
-  padding: 1rem;
+  padding: 0.6rem 1rem;
   text-decoration: none;
   border-radius: 1rem;
   border-width: $basicBorder;
@@ -23,6 +23,7 @@ body {
 .buttonLook:hover {
   text-decoration: underline;
   text-decoration-thickness: $basicBorder;
+  cursor: pointer;
 }
 
 h1 {
