@@ -4,7 +4,7 @@ $background: #ffd18f;
 $basicBorder: 0.2rem !important;
 $boldBorder: 0.25rem;
 $cardSize: 360px;
-$fontFamily: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+$fontFamily: "Roboto", Calibri, "Trebuchet MS", sans-serif;
 
 @mixin focusColor {
   border-width: $boldBorder;

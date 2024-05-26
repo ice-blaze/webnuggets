@@ -1,4 +1,6 @@
-import {Component} from '@angular/core'
+import {
+	Component, Input,
+} from '@angular/core'
 
 @Component({
 	selector: `app-title`,
@@ -7,5 +9,7 @@ import {Component} from '@angular/core'
 	templateUrl: `./title.component.html`,
 	styleUrl: `./title.component.scss`,
 })
-// eslint-disable-next-line @typescript-eslint/no-extraneous-class
-export class TitleComponent {}
+export class TitleComponent {
+	@Input()
+	public shouldDisplayDescription = false
+}
