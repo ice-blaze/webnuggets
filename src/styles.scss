@@ -25,6 +25,10 @@ body {
   text-decoration-thickness: $basicBorder;
   cursor: pointer;
 }
+button {
+  font-family: $fontFamily;
+  font-size: 1rem;
+}
 
 h1 {
   margin: 0;
