@@ -1,13 +1,11 @@
 :host {
-  background-color: #13253a;
-  width: 100%;
   display: flex;
   height: 4rem;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 1rem;
 }
 
-:host,
-a {
-  color: white;
+.code {
+  font-family: monospace;
 }
