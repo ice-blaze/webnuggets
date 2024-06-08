@@ -10,6 +10,10 @@
 .container {
   @include flex;
   flex-direction: column;
+  width: 100%;
+}
+.outer-card {
+  width: 100%;
 }
 
 .actions {
@@ -19,11 +23,18 @@
 .inner-card {
   @include cardBasis;
   max-width: 40rem;
+  margin: 1rem;
 }
 
 .buttonLook {
   background-color: $background;
 }
 
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
 
 @include topics();

@@ -27,6 +27,7 @@ a {
   font-size: larger;
   font-weight: bolder;
   width: fit-content;
+  text-wrap: nowrap;
 }
 
 a::before {
