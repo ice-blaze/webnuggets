@@ -2,15 +2,10 @@
   class="card"
   [routerLink]="['/', 'details', nugget.id]"
   appRandomBackgroundColor
-  (mouseenter)="enter()"
-  (mouseleave)="leave()"
-  (focus)="enter()"
-  (focusout)="leave()"
 >
   <div class="inner-card">
     <div class="title">
-      <!-- TODO should be limited in size -->
-      <h1 [class.underlined]="isMouseHover">
+      <h1>
         <mat-icon
           aria-hidden="true"
           [fontIcon]="IconConverter[nugget.format]"

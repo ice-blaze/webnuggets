@@ -24,15 +24,5 @@ import {RandomBackgroundColorDirective} from './random-background-color.directiv
 export class TileComponent {
 	public readonly IconConverter = IconConverter
 	@Input({required: true})
-		nugget!: WebNugget
-
-	public isMouseHover = false
-
-	public enter(): void {
-		this.isMouseHover = true
-	}
-
-	public leave(): void {
-		this.isMouseHover = false
-	}
+	public nugget!: WebNugget
 }
