@@ -21,8 +21,11 @@ p {
   letter-spacing: 0.07rem;
 }
 
-.image-content {
-  height: 280px;
-  background: url("../../assets/title.svg") center center no-repeat;
-  background-size: auto 100%;
+picture {
+  display: block;
+  text-align: center;
+}
+
+img {
+  max-height: 260px;
 }

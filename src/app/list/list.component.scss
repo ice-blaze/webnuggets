@@ -1,5 +1,7 @@
 @use "../../variables" as *;
 
+$searchWidth: min(256px, 90vw);
+
 .container {
   display: flex;
   flex-direction: column;
@@ -8,11 +10,16 @@
   overflow-x: hidden;
 }
 
+label,
+.search,
+input {
+  width: $searchWidth;
+}
+
 .search {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
 
   mat-icon {
     position: absolute;

@@ -3,7 +3,8 @@ $hoverColor: orange;
 $background: #ffd18f;
 $basicBorder: 0.2rem !important;
 $boldBorder: 0.25rem;
-$cardSize: 360px;
+$cardSize: min(360px, 100vw);
+
 $fontFamily: "Roboto", Calibri, "Trebuchet MS", sans-serif;
 
 @mixin focusColor {
