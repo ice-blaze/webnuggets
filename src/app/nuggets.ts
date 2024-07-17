@@ -1,5 +1,5 @@
 export type Format = `book` | `article` | `video` | `tip` | `podcast`
-export type Topic = `web` | `gaming` | `softskills` | `angular` | `javascript` | `css` | `accessibility`
+export type Topic = `web` | `gaming` | `softskills` | `angular` | `javascript` | `css` | `accessibility` | `devops`
 
 export const IconConverter: Record<Format, string> = {
 	book: `menu_book`,
@@ -494,6 +494,38 @@ export const webNuggets: ()=> WebNugget[] = () => [
 		topics: [`softskills`],
 		date: `2024-05-08`,
 	},
+
+	{
+		id: `facebook-quite-git`,
+		title: `Facebook quit git`,
+		content: `
+		Interesting article about why Facebook decided to stop using Git. The writing style is 
+		quite humble. I also liked the part about how the team tried to help people adopt the new 
+		tool by accompanying them.
+		`,
+		link: `https://graphite.dev/blog/why-facebook-doesnt-use-git?utm_source=tldrnewsletter`,
+		format: `article`,
+		topics: [`devops`],
+		date: `2024-07-17`,
+	},
+
+	{
+		id: `problems-at-facebook-arent-others`,
+		title: `Nothing at Facebook is someone else's problem`,
+		content: `
+		I've been watching and reading a lot about Kent Beck lately because many people mention
+		him. He is the re-discoverer of TDD. But one thing struck me in a video I watched. It was
+		at the very end of the video, during a Q&A session. While the question itself isn't important,
+		the answer is very significant. At Facebook, nothing is considered someone else's problem.
+		This is a fascinating culture that fosters collaboration within the company and promotes
+		individual responsibility. I hope I can convey this mindset to others at my workplace.
+		`,
+		link: `https://youtu.be/cGuTmOUdFbo?t=2380`,
+		format: `video`,
+		topics: [`softskills`],
+		date: `2024-07-17`,
+	},
+  
 	// {
 	// id: ``,
 	// title: ``,
